@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RockPaperScissors</string>
+    <string name="back_to_menu">Back to menu</string>
+    <string name="lose">LOSE !!!</string>
+    <string name="win">WIN !!!</string>
+    <string name="draw">DRAW !!!</string>
+    <string name="player_vs_cpu">Player vs CPU</string>
+    <string name="cpu_vs_cpu">CPU vs CPU</string>
 </resources>

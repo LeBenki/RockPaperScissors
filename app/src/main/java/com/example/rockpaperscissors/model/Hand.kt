@@ -2,10 +2,14 @@ package com.example.rockpaperscissors.model
 
 import com.example.rockpaperscissors.R
 
-enum class Hand (val id: Int, val resId: Int, val winsAgainst: List<Int>) {
-    ROCK(0, R.drawable.rock, listOfNotNull(2)),
-    PAPER(1, R.drawable.rock, listOfNotNull(0)),
-    SCISSORS(2, R.drawable.rock, listOfNotNull(1));
+fun getRandomHand(): Hand {
+    return Hand.values()[(0..2).random()]
+}
 
-    fun isWinningAgainst(hand: Hand) = (hand.winsAgainst.contains(hand.id))
+enum class Hand (val resId: Int, val winsAgainst: List<String>) {
+    ROCK(R.drawable.rock, listOfNotNull("SCISSORS")),
+    PAPER(R.drawable.paper, listOfNotNull("ROCK")),
+    SCISSORS( R.drawable.scissors, listOfNotNull("PAPER"));
+
+    fun isWinningAgainst(hand: Hand) = (winsAgainst.contains(hand.name))
 }

@@ -1,17 +1,20 @@
 package com.example.rockpaperscissors
 
+import com.example.rockpaperscissors.model.Hand
 import org.junit.Test
 
 import org.junit.Assert.*
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class ExampleUnitTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun checkHandWinning() {
+        val rock = Hand.ROCK
+        val paper = Hand.PAPER
+        val scissors = Hand.SCISSORS
+
+        assertTrue(rock.isWinningAgainst(scissors))
+        assertTrue(scissors.isWinningAgainst(paper))
+        assertTrue(paper.isWinningAgainst(rock))
     }
 }
